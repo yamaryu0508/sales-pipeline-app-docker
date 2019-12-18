@@ -1,0 +1,15 @@
+#!/usr/bin/expect -f
+
+set timeout 300
+
+spawn python manage.py createsuperuser
+
+expect "Username: "
+send "kintone\n"
+expect "address: "
+send "admin@example.com\n"
+expect "Password: "
+send "44montgomery\n"
+expect "again): "
+send "44montgomery\n"
+exit
